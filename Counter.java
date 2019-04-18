@@ -15,19 +15,18 @@ public class Counter {
 
         for(int i = 0; i < fishObj.length; i++) {
 
-            fishObj[i].setAnimal(type);
-
             System.out.print("Fish name: ");
             name = sc1.nextLine();
-            fishObj[i].setFish(name);
+            //fishObj[i].setFish(name);
 
             System.out.print("Fish price: ");
             price = sc1.nextDouble();
-            fishObj[i].setPrice(price);
+            //fishObj[i].setPrice(price);
 
             System.out.print("fish weight: ");
             weight = sc1.nextDouble();
-            fishObj[i].setWeight(weight);
+            //fishObj[i].setWeight(weight);
+            sc1.nextLine();
 
             fishObj[i] = new Fish(type, name, price, weight);
         }
