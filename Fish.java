@@ -1,8 +1,12 @@
+import java.text.DecimalFormat;
+
 public class Fish extends Animal{
 
     protected String fish;
     protected double weight;
 
+    private static DecimalFormat df2 = new DecimalFormat("0.00");
+    
     public Fish(char animal, String fish, double price, double weight) {
         super(animal, price);
         setFish(fish);
@@ -31,7 +35,7 @@ public class Fish extends Animal{
     }
 
     public String toString() {
-        return "Product = " + getAnimal() + "\nFish = " + getFish() + "\nWeight = " + getWeight() +
-                "\nPrice/kg = " + getPrice() + "Total Price = " + calculatePrice();
+        return "Product = " + getAnimal() + "\nFish = " + getFish() + "\nWeight = " + df2.format(getWeight()) +
+                "\nPrice/kg = " + df2.format(getPrice()) + "Total Price = " + df2.format(calculatePrice());
     }
 }
